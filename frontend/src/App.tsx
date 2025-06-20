@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import OrderForm from './components/OrderForm';
 import AdminOrders from './components/AdminOrders';
 import './index.css';
@@ -30,8 +30,8 @@ const App: React.FC = () => {
           </nav>
         </header>
         {location === '/' && <Hero />}
-        <main className="flex-1 flex flex-col items-center justify-start py-8 px-4 md:px-8 lg:px-16">
-          <div className="w-full max-w-6xl bg-gray-900 text-white rounded-xl shadow-lg p-6 md:p-8 lg:p-12 mx-auto">
+        <main className="flex-1 flex flex-col md:flex md:items-center md:justify-center py-8 px-4 md:px-8 lg:px-16">
+          <div className="w-full mx-auto md:mx-auto max-w-6xl bg-gray-900 text-white rounded-xl shadow-lg p-6 md:p-8 lg:p-12">
             <Routes>
               <Route path="/" element={<OrderForm />} />
               <Route path="/admin" element={<AdminOrders />} />
