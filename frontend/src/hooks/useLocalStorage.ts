@@ -5,7 +5,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       const item = window.localStorage.getItem(key);
       return item ? (JSON.parse(item) as T) : initialValue;
-    } catch (error) {
+    } catch (error) { // eslint-disable-line @typescript-eslint/no-unused-vars
       return initialValue;
     }
   });
@@ -14,7 +14,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       setStoredValue(value);
       window.localStorage.setItem(key, JSON.stringify(value));
-    } catch (error) {
+    } catch (error) { // eslint-disable-line @typescript-eslint/no-unused-vars
       // Ignore write errors
     }
   };
