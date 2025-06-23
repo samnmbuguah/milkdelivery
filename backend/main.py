@@ -24,7 +24,7 @@ def get_db():
         print("[DB] Closing database session")
         db.close()
 
-@app.get("/")
+@app.get("\")
 def read_root():
     print("[API] Root endpoint called")
     return {"message": "Milk Delivery API is running"}
@@ -45,7 +45,7 @@ def update_order_status(order_id: int, status: str, db: Session = Depends(get_db
     if status not in ["pending", "delivered"]:
         raise HTTPException(status_code=400, detail="Status must be 'pending' or 'delivered'")
     
-    order = crud.update_order_status(db, order_id, status)
+    order = crud.update_order_status(db, order_id)
     if not order:
         raise HTTPException(status_code=404, detail="Order not found")
     
