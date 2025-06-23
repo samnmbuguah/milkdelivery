@@ -92,7 +92,7 @@ const AdminOrders: React.FC = () => {
                                             <button
                                                 onClick={() => handleCompleteOrder(order.id)}
                                                 disabled={updatingOrder === order.id}
-                                                className="border border-gray-400 bg-white text-black px-2 py-1 rounded font-bold text-xs hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                                                className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded font-bold text-xs transition disabled:opacity-60 disabled:cursor-not-allowed shadow-sm border-none focus:outline-none focus:ring-2 focus:ring-green-400"
                                             >
                                                 {updatingOrder === order.id ? 'Updating...' : 'Mark Delivered'}
                                             </button>
