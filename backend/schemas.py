@@ -21,6 +21,7 @@ class Order(BaseModel):
     total: float
     latitude: Optional[float] = None
     longitude: Optional[float] = None
+    status: str
     created_at: datetime
 
     class Config:
